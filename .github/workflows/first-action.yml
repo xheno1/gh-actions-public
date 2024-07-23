@@ -1,0 +1,25 @@
+# "Actions" are a separate feature
+# Here we are only creating workflow
+
+name: First workflow
+
+# When will this workflow execute/trigger
+# check available events @see: 
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+on: workflow_dispatch
+
+# Jobs accepts value in below
+jobs:
+  i-can-name-anything-in-job:   # not reserved name
+    runs-on: ubuntu-latest # see docs for available machines
+    steps:
+      - name: Print Reading
+        run: echo "Hello world" #Prints hello world on CLI can be also custom
+      - name: Print End
+        run: echo "Bye"
+      - name: Multiple Print
+        run: |
+          echo "First output"
+          echo "Second output"
+        
+    
